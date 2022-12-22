@@ -9,14 +9,18 @@ const ingredients = [
 
 const ulRef = document.querySelector("ul#ingredients");
 console.log(ulRef);
+const liArray = []
 
 ingredients.forEach((e) => {
   let li = document.createElement("li");
   li.classList.add("item");
   li.textContent = e;
   console.log(li);
-  ulRef.append(li);
+  liArray.push(li);
 });
+ulRef.append(...liArray)
+
+
 
 // let a = document.createElement('li')
 // a.classList.add('item');
