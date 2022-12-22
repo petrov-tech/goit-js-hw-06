@@ -1,4 +1,6 @@
 const ulRef = document.querySelector("ul#categories");
+console.log("🚀 -> ulRef", ulRef);
+
 
 const liRef = document.querySelectorAll("li.item");
 console.log("Number of categories:", liRef.length);

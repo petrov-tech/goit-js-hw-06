@@ -20,9 +20,16 @@ const markup = images
     (i) => `<li><img
       src="${i.url}"
       alt="${i.alt}"
-      width="250"
+      width="350"
       ></li>`
   )
   .join("");
-// console.log(markup)
+
 root.insertAdjacentHTML("afterbegin", markup);
+
+root.style.display = "flex"
+root.style.listStyle = "none";
+root.style.gap = "20px";
+root.style.justifyContent = "center";
+root.style.alignItems = "center";
+
