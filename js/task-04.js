@@ -1,5 +1,4 @@
 const CounterPlagin = function ({
-//   rootSelector,
   counterValue = 0,
   step = 1,
 } = {}) {
@@ -26,12 +25,10 @@ CounterPlagin.prototype._getRefs = function () {
 
 CounterPlagin.prototype._bindEvents = function () {
     this._refs.incrementBtn.addEventListener('click', () => {
-        // console.log(this);
         this.increment()
         this.updateValueUI()
     });
     this._refs.decrementBtn.addEventListener("click", () => {
-        // console.log(this)
         this.decrement();
         this.updateValueUI()
     });
@@ -49,7 +46,4 @@ CounterPlagin.prototype.decrement = function () {
   this._value -= this._step;
 };
 
-const counter = new CounterPlagin({ step: 1 });
-console.log(counter);
-// counter.increment();
-// counter.decrement();
+new CounterPlagin({ step: 1 });

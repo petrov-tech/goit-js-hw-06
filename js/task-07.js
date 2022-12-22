@@ -1,15 +1,7 @@
-const fontSizeControl = document.querySelector("#font-size-control");
-console.log("🚀 -> fontSizeControl", fontSizeControl);
+const fontSizeControl = document.querySelector("input#font-size-control");
 
+const textSize = document.querySelector("span#text");
 
-const textSize = document.querySelector("#text");
-console.log("🚀 -> textSize", textSize.textContent);
-
-// fontSizeControl.addEventListener('range', (event) => {
-//     textSize.textContent.fontSizeControl = event.currentTarget(value)
-// })
-
-
-// fontSizeControl.value = 67
-// console.log("🚀 -> fontSizeControl.value ", fontSizeControl.value );
-
+fontSizeControl.addEventListener("change", (event) => {
+  textSize.style.fontSize = `${event.target.value}px`;
+});
