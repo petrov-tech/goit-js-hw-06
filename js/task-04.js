@@ -1,49 +1,70 @@
-const CounterPlagin = function ({
-  counterValue = 0,
-  step = 1,
-} = {}) {
-  this._value = counterValue;
-  this._step = step;
+// const CounterPlagin = function ({
+//   counterValue = 0,
+//   step = 1,
+// } = {}) {
+//   this._value = counterValue;
+//   this._step = step;
 
-  this._refs = this._getRefs();
-  this._bindEvents();
-};
+//   this._refs = this._getRefs();
+//   this._bindEvents();
+// };
 
-CounterPlagin.prototype._getRefs = function () {
-  const refs = {};
-    refs.container = document.querySelector('#counter');
-    refs.incrementBtn = refs.container.querySelector(
-      '[data-action="increment"]'
-    );
-     refs.decrementBtn = refs.container.querySelector(
-       '[data-action="decrement"]'
-     );
-    refs.value = refs.container.querySelector("#value");
+// CounterPlagin.prototype._getRefs = function () {
+//   const refs = {};
+//     refs.container = document.querySelector('#counter');
+//     refs.incrementBtn = refs.container.querySelector(
+//       '[data-action="increment"]'
+//     );
+//      refs.decrementBtn = refs.container.querySelector(
+//        '[data-action="decrement"]'
+//      );
+//     refs.value = refs.container.querySelector("#value");
 
-  return refs;
-};
+//   return refs;
+// };
 
-CounterPlagin.prototype._bindEvents = function () {
-    this._refs.incrementBtn.addEventListener('click', () => {
-        this.increment()
-        this.updateValueUI()
-    });
-    this._refs.decrementBtn.addEventListener("click", () => {
-        this.decrement();
-        this.updateValueUI()
-    });
-}
+// CounterPlagin.prototype._bindEvents = function () {
+//     this._refs.incrementBtn.addEventListener('click', () => {
+//         this.increment()
+//         this.updateValueUI()
+//     });
+//     this._refs.decrementBtn.addEventListener("click", () => {
+//         this.decrement();
+//         this.updateValueUI()
+//     });
+// }
 
-CounterPlagin.prototype.updateValueUI = function () {
-    this._refs.value.textContent = this._value
-}
+// CounterPlagin.prototype.updateValueUI = function () {
+//     this._refs.value.textContent = this._value
+// }
 
-CounterPlagin.prototype.increment = function () {
-  this._value += this._step;
-};
+// CounterPlagin.prototype.increment = function () {
+//   this._value += this._step;
+// };
 
-CounterPlagin.prototype.decrement = function () {
-  this._value -= this._step;
-};
+// CounterPlagin.prototype.decrement = function () {
+//   this._value -= this._step;
+// };
 
-new CounterPlagin({ step: 1 });
+// new CounterPlagin({ step: 1 });
+
+
+
+
+
+let counterValue = 0;
+
+const incrementBtn = document.querySelector('[data-action="increment"]');
+const decrementBtn = document.querySelector('[data-action="decrement"]');
+const value = document.querySelector('#value')
+
+
+incrementBtn.addEventListener('click', () => {
+  counterValue += 1;
+  value.textContent = counterValue
+})
+
+decrementBtn.addEventListener("click", () => {
+  counterValue -= 1;
+  value.textContent = counterValue;
+});

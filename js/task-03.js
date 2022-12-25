@@ -20,7 +20,7 @@ const markup = images
     (i) => `<li><img
       src="${i.url}"
       alt="${i.alt}"
-      width="350"
+      width="250"
       ></li>`
   )
   .join("");
@@ -32,4 +32,3 @@ root.style.listStyle = "none";
 root.style.gap = "20px";
 root.style.justifyContent = "center";
 root.style.alignItems = "center";
-

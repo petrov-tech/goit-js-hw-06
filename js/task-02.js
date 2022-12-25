@@ -19,10 +19,3 @@ ingredients.forEach((e) => {
   liArray.push(li);
 });
 ulRef.append(...liArray)
-
-
-
-// let a = document.createElement('li')
-// a.classList.add('item');
-// a.textContent = "Potatoes";
-// console.log(a)
