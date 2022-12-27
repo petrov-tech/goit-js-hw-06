@@ -11,5 +11,4 @@ changeColor.addEventListener("click", event => {
 
   body.style.backgroundColor = color;
   span.textContent = color;
-  console.log(color, 'як зробити щоб у body в style видавало той самий колір?(маю на увазі щоб значення було в hex)');
 });
